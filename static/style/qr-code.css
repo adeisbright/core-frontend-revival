@@ -1,0 +1,85 @@
+/* Normalization First */
+*,
+::after , 
+::before {
+    padding : 0;
+    margin : 0
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+.outfit {
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+}
+/*Utilities Classes*/
+.brown-bg {
+    background:  hsl(212, 45%, 89%)
+}
+
+.mild-blue-bg {
+    background : lightblue;
+}
+.round-component-edge {
+    border : none ; 
+    border-radius: .65rem;
+}
+
+.flexer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.parent-box {
+    padding : 1.5rem .75rem;
+    border : none;
+    border-radius: .75rem;
+    background : #fff;
+    width :20%;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+/* .img-container {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+} */
+img {
+    max-width: 100%;
+}
+/*Responsive Design*/
+
+@media (max-width:568px){
+    .parent-box {
+        width :80%;
+    }
+    .mb-1 {
+        margin-bottom: .2rem;
+    }
+    .mb-3 {
+        margin-bottom: .4rem;
+    }
+
+    .outfit {
+        font-family: "Outfit", serif;
+        font-optical-sizing: auto;
+        font-weight:200;
+        font-style: normal;
+    }
+}
