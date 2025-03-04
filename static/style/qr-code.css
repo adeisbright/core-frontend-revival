@@ -3,28 +3,42 @@
 ::after , 
 ::before {
     padding : 0;
-    margin : 0
-}
-
-html {
+    margin : 0;
     box-sizing: border-box;
 }
 
-body {
-    padding-top: 8rem;
-    padding-bottom: 3rem;
+
+/* Color Palette */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
 }
 
-.outfit {
-    font-family: "Outfit", serif;
+body {
+    background-color: #D5E1EF;
+    font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight:400;
+
     font-style: normal;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin : 0;
+    padding:1rem; 
 }
+
+
+.center {
+    text-align: center;
+}
+
 /*Utilities Classes*/
-.brown-bg {
-    background:  hsl(212, 45%, 89%)
-}
 
 .mild-blue-bg {
     background : lightblue;
@@ -34,52 +48,58 @@ body {
     border-radius: .65rem;
 }
 
-.flexer {
+.card-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-}
-.parent-box {
-    padding : 1.5rem .75rem;
+    flex-direction: column;
     border : none;
     border-radius: .75rem;
     background : #fff;
-    width :20%;
+    padding : 1rem;
+    padding-bottom: 1.75rem;
+    margin-bottom: .3rem;
+    max-width: 25rem;
 }
-.mb-1 {
+
+.card-img-container {
+    margin-bottom : 1.5rem
+}
+.card-content {
+    text-align: center;
+}
+.card-title {
     margin-bottom: 1rem;
+    color: var(--slate-900);
+    font-weight: 500;
+}
+.card-container p {
+    letter-spacing: .005rem ;
 }
 
-.mb-3 {
-    margin-bottom: 3rem;
-}
+.card-text  , .attribution{
+    color: var(--slate-500);
+    font-weight: 400;
+  
+  }
 
-/* .img-container {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-} */
+
 img {
     max-width: 100%;
+    overflow :hidden
 }
-/*Responsive Design*/
 
-@media (max-width:568px){
-    .parent-box {
-        width :80%;
-    }
-    .mb-1 {
-        margin-bottom: .2rem;
-    }
-    .mb-3 {
-        margin-bottom: .4rem;
-    }
-
-    .outfit {
-        font-family: "Outfit", serif;
-        font-optical-sizing: auto;
-        font-weight:200;
-        font-style: normal;
-    }
+footer {
+    position : fixed;
+    bottom : 0;
+    width  :100%;
+    padding:2rem;
+    text-align: center;
+}
+.attribution {
+    font-size: .45rem;
+}
+.attribution a {
+    text-decoration: none; 
+    color: hsl(228, 45%, 44%); 
 }
