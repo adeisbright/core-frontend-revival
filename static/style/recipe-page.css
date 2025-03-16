@@ -1,121 +1,136 @@
-* , ::after , ::before {
-    margin : 0 ;
-    padding : 0 ; 
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
-    --font-size: 16px;
-    --white: hsl(0, 0%, 100%);
-    --stone100 : hsl(30, 54%, 90%) ; 
-    --stone150 :hsl(30, 18%, 87%) ; 
-    ---stone600 : hsl(30, 10%, 34%) ; 
-    ---stone900 :  hsl(24, 5%, 18%) ; 
-    --brown : hsl(14, 45%, 36%) ; 
-    --rose80 : hsl(332, 51%, 32%) ; 
-    --rose50: hsl(330, 100%, 98%)
+  --font-size: 16px;
+  --white: hsl(0, 0%, 100%);
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  ---stone600: hsl(30, 10%, 34%);
+  ---stone900: hsl(24, 5%, 18%);
+  --brown: hsl(14, 45%, 36%);
+  --rose80: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
 }
 body {
-    font-size : var(--font-size);
-    min-height: 100vh;
-    /* background: var(--stone100); */
-    color :var(---stone900);
-    font-family: "Outfit",sans-serif;
-    line-height: 1.5;
+  font-size: var(--font-size);
+  min-height: 100vh;
+  color: var(---stone900);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
 }
 .mb-2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .container {
-    display : flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container-img {
-    margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .container-img img {
-    width:100%;
-    object-fit: contain;
-    object-position: center;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .recipe-container {
-    padding : 2rem;
-    margin-bottom: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
-h1 {
-    font-family: "Young Serif", serif;
-    font-weight: 400;
-    font-size:2rem ;
-    color : var(---stone900);
-    margin-bottom: 1rem;
+.article-title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(---stone900);
+  margin-bottom: 1rem;
 }
 
 .time-container {
-    background : var(--rose50);
-    padding  :1rem;
-    border-radius:.45rem;
-    margin-bottom: 2rem;
-    
+  background: var(--rose50);
+  padding: 1rem;
+  border-radius: 0.45rem;
+  margin-bottom: 2rem;
 }
 
 .time-container h2 {
-    color: var(--rose80);
-    margin-bottom:.5rem
+  color: var(--rose80);
+  margin-bottom: 0.5rem;
 }
 
-.time-container ul ,  
-.ingredients-container ul ,
-.instructions-container ul
-{
-    list-style-position: inside;
+.time-container ul,
+.ingredients-container ul,
+.instructions-container ul {
+  list-style-position: inside;
 }
-.time-container li , .ingredients-container li  {
-    margin-bottom:.65rem
-}
-
-.ingredients-container , .instructions-container   {
-    border-bottom: 0.2px solid var(--stone100);
-    margin-bottom: 2rem;
-    padding-bottom: .75rem;
-}
-.ingredients-container h2 ,
-.instructions-container h2 , 
-.nutrition-container h2 {
-    font-family: "Young Serif", serif;
-    font-weight: 300;
-    font-size:1.5rem ;
-    color : var(--brown);
-    margin-bottom: 1rem;
+.time-container li,
+.ingredients-container li {
+  margin-bottom: 0.65rem;
 }
 
-
-.instructions-container span  {
-    color : var(---stone600);
-    font-weight: 650;
+.ingredients-container,
+.instructions-container {
+  border-bottom: 0.2px solid var(--stone100);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+}
+.article-sub-header {
+  font-family: "Young Serif", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--brown);
+  margin-bottom: 1rem;
 }
 
-/* .instructions-list  {
-    list-style-type: lower-alpha;
-    color  :red
-} */
-
+.instructions-container span {
+  color: var(---stone600);
+  font-weight: 650;
+}
 
 .liner {
-    display : grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-bottom: 1rem;
-    padding-bottom:.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
 }
-.liner:not(:last-child){
-    border-bottom : 1px solid var(--stone100);
+.liner:not(:last-child) {
+  border-bottom: 1px solid var(--stone100);
 }
 
-.liner span:nth-child(even){
-    color : var(--brown)
+.liner span:nth-child(even) {
+  color: var(--brown);
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: var(--stone150);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .main-item {
+    background: var(--white);
+    border-radius: 10px;
+    max-width: 700px;
+    padding: 1rem;
+  }
+}
